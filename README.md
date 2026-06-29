@@ -22,6 +22,8 @@ skills/            Codex skill drafts for compiling and reviewing PRA records
 docs/              Design notes and conventions
 ```
 
+See `docs/versioning.md` for template and schema versioning rules.
+
 ## Quick Start
 
 Copy `template/` into a project, then add YAML records under the entity
