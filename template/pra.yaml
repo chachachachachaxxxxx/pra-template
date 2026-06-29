@@ -1,0 +1,6 @@
+schema: pra-template
+schema_version: "0.1.0"
+project:
+  id: ""
+  alias: ""
+  context: ""

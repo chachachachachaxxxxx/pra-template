@@ -1,0 +1,13 @@
+[project]
+name = "pra-template"
+version = "0.1.0"
+description = "Template, schemas, validators, and Codex skills for Project-native Research Artifacts"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "PyYAML>=6.0",
+]
+license = { text = "MIT" }
+
+[tool.ruff]
+line-length = 100

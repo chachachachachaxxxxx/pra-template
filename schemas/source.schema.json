@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/pra/source.schema.json",
+  "title": "PRA Source",
+  "type": "object",
+  "required": ["id", "type", "alias"],
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string" },
+    "type": { "enum": ["paper", "dataset", "codebase", "session", "artifact", "other"] },
+    "alias": { "type": "string" },
+    "citation": { "type": "string" },
+    "url": { "type": "string" },
+    "path": { "type": "string" },
+    "notes": { "type": ["string", "null"] }
+  }
+}

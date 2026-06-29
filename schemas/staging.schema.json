@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/pra/staging.schema.json",
+  "title": "PRA Staging Item",
+  "type": "object",
+  "required": ["id", "type", "raw", "candidate_types", "sources", "status", "promoted_to"],
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^S[0-9]{5}$"
+    },
+    "type": {
+      "const": "staging_item"
+    },
+    "alias": {
+      "type": "string"
+    },
+    "raw": {
+      "type": "string"
+    },
+    "candidate_types": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "sources": {
+      "type": "array"
+    },
+    "status": {
+      "enum": ["inbox", "triaged", "promoted", "parked", "discarded"]
+    },
+    "promoted_to": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "notes": {
+      "type": ["string", "null"]
+    }
+  }
+}

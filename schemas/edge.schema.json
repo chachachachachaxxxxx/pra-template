@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/pra/edge.schema.json",
+  "title": "PRA Edge Set",
+  "type": "object",
+  "required": ["edges"],
+  "additionalProperties": true,
+  "properties": {
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["from", "to", "relation"],
+        "additionalProperties": true,
+        "properties": {
+          "from": { "type": "string" },
+          "to": { "type": "string" },
+          "relation": { "type": "string" },
+          "context": { "type": "string" },
+          "confidence": { "type": ["string", "number", "null"] },
+          "sources": {
+            "type": "array"
+          }
+        }
+      }
+    }
+  }
+}

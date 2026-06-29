@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rigor Reviewer"
+  short_description: "Review PRA graph rigor and confidence"
+  default_prompt: "Review this PRA project for PHO rigor, unsupported claims, overstrong edges, confidence issues, and source gaps."

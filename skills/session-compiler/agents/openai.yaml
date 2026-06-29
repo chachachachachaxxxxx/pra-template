@@ -1,0 +1,4 @@
+interface:
+  display_name: "Session Compiler"
+  short_description: "Capture research sessions into PRA staging and records"
+  default_prompt: "Compile this research session into PRA session notes, staging items, and any stable PHO or edge records."

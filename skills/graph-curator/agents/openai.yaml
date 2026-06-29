@@ -1,0 +1,4 @@
+interface:
+  display_name: "Graph Curator"
+  short_description: "Curate duplicate and related PRA nodes"
+  default_prompt: "Curate these PRA nodes and edges by proposing same_as, close_to, broader_than, narrower_than, or conflict edges."

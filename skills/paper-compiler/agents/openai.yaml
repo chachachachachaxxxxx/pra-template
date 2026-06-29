@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paper Compiler"
+  short_description: "Compile papers into PRA PHO records"
+  default_prompt: "Compile this paper or paper notes into PRA Problem, Hypothesis, Observation, source, edge, and trace records."

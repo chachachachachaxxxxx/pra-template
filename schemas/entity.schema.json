@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/pra/entity.schema.json",
+  "title": "PRA Entity",
+  "type": "object",
+  "required": ["id", "type", "alias", "statement", "context", "status", "sources"],
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^(P|H|O|E|R)[0-9]{5}$"
+    },
+    "type": {
+      "enum": ["problem", "hypothesis", "observation", "experiment", "run"]
+    },
+    "alias": {
+      "type": "string"
+    },
+    "statement": {
+      "type": "string"
+    },
+    "context": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "confidence": {
+      "type": ["string", "number", "null"]
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          { "type": "string" },
+          {
+            "type": "object",
+            "required": ["id"],
+            "additionalProperties": true,
+            "properties": {
+              "id": { "type": "string" },
+              "locator": { "type": "string" },
+              "note": { "type": "string" }
+            }
+          }
+        ]
+      }
+    },
+    "notes": {
+      "type": ["string", "null"]
+    }
+  }
+}
